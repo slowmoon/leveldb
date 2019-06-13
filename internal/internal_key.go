@@ -78,3 +78,11 @@ var InternalKeyComparator comp.ComparatorFunc = func(a, b interface{}) int {
     }
     return  res
 }
+
+func UserKeyCompare(a, b interface{}) int {
+
+     aKey := a.([]byte)
+     bKey := b.([]byte)
+
+     return  bytes.Compare(aKey, bKey)
+}
